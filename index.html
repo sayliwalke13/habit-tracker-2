@@ -1,149 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow Pro</title>
 
-<title>Professional Habit Tracker V2</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="app">
 
-<!-- =========================
-        SIDEBAR
-========================== -->
+    <!-- Sidebar -->
 
-<aside class="sidebar">
+    <aside class="sidebar">
 
-<div class="logo">
+        <h2>HabitFlow</h2>
 
-<h2>Habit Tracker</h2>
+        <button id="dashboardBtn">Dashboard</button>
 
-<p>Professional V2</p>
+        <button id="trackerBtn">Habit Tracker</button>
 
-</div>
+        <button id="graphBtn">Graphs</button>
 
-<nav>
+        <button id="notesBtn">Notes</button>
 
-<button class="menu active">🏠 Dashboard</button>
+        <button id="settingsBtn">Settings</button>
 
-<button class="menu">✅ Habits</button>
+    </aside>
 
-<button class="menu">📊 Analytics</button>
 
-<button class="menu">📝 Notes</button>
 
-<button class="menu">⚙️ Settings</button>
+    <!-- Main Content -->
 
-</nav>
+    <main class="main-content">
 
-</aside>
+        <!-- Header -->
 
-<!-- =========================
-        MAIN
-========================== -->
+        <header class="header">
 
-<main class="main">
+            <h1>Habit Tracker Dashboard</h1>
 
-<header class="topbar">
+            <div class="dateBox">
+                <span id="currentDate"></span>
+            </div>
 
-<div>
+        </header>
 
-<h1>Professional Habit Tracker</h1>
 
-<p id="todayDate"></p>
 
-</div>
+        <!-- Summary Cards -->
 
-<div class="profile">
+        <section class="cards">
 
-👤
+            <div class="card">
 
-</div>
+                <h3>Total Habits</h3>
 
-</header>
+                <p id="totalHabits">0</p>
 
-<!-- =========================
-      DASHBOARD
-========================== -->
+            </div>
 
-<section class="dashboard">
+            <div class="card">
 
-<div class="card">
+                <h3>Today's Progress</h3>
 
-<h3>Today's Progress</h3>
+                <p id="todayProgress">0%</p>
 
-<h1 id="todayPercent">0%</h1>
+            </div>
 
-</div>
+            <div class="card">
 
-<div class="card">
+                <h3>Monthly Progress</h3>
 
-<h3>Monthly Progress</h3>
+                <p id="monthlyProgress">0%</p>
 
-<h1 id="monthPercent">0%</h1>
+            </div>
 
-</div>
+            <div class="card">
 
-<div class="card">
+                <h3>Water Intake</h3>
 
-<h3>Total Habits</h3>
+                <p id="waterCount">0 L</p>
 
-<h1 id="habitCount">0</h1>
+            </div>
 
-</div>
+        </section>
 
-<div class="card">
 
-<h3>Current Streak</h3>
 
-<h1 id="streak">0 🔥</h1>
+        <!-- Habit Section -->
 
-</div>
+        <section class="habit-section">
 
-</section>
+            <div class="top-bar">
 
-<!-- =========================
-      ADD HABIT
-========================== -->
+                <h2>Your Habits</h2>
 
-<section class="addHabit">
+                <button id="addHabitBtn">
 
-<h2>Add New Habit</h2>
+                    + Add Habit
 
-<div class="habitForm">
+                </button>
 
-<input
-type="text"
-id="habitName"
-placeholder="Habit Name">
+            </div>
 
-<input
-type="text"
-id="habitTarget"
-placeholder="Target (Example : 2 Hours / 10 Glasses)">
+            <div id="habitTableContainer">
 
-<button id="addHabitBtn">
+            </div>
 
-Add Habit
+        </section>
 
-</button>
+    </main>
 
 </div>
 
-</section>
+<script src="script.js"></script>
+
+</body>
+</html>
