@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Professional Habit Tracker V2</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- =========================
+        SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>Habit Tracker</h2>
+
+<p>Professional V2</p>
+
+</div>
+
+<nav>
+
+<button class="menu active">🏠 Dashboard</button>
+
+<button class="menu">✅ Habits</button>
+
+<button class="menu">📊 Analytics</button>
+
+<button class="menu">📝 Notes</button>
+
+<button class="menu">⚙️ Settings</button>
+
+</nav>
+
+</aside>
+
+<!-- =========================
+        MAIN
+========================== -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Professional Habit Tracker</h1>
+
+<p id="todayDate"></p>
+
+</div>
+
+<div class="profile">
+
+👤
+
+</div>
+
+</header>
+
+<!-- =========================
+      DASHBOARD
+========================== -->
+
+<section class="dashboard">
+
+<div class="card">
+
+<h3>Today's Progress</h3>
+
+<h1 id="todayPercent">0%</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Monthly Progress</h3>
+
+<h1 id="monthPercent">0%</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Total Habits</h3>
+
+<h1 id="habitCount">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Current Streak</h3>
+
+<h1 id="streak">0 🔥</h1>
+
+</div>
+
+</section>
+
+<!-- =========================
+      ADD HABIT
+========================== -->
+
+<section class="addHabit">
+
+<h2>Add New Habit</h2>
+
+<div class="habitForm">
+
+<input
+type="text"
+id="habitName"
+placeholder="Habit Name">
+
+<input
+type="text"
+id="habitTarget"
+placeholder="Target (Example : 2 Hours / 10 Glasses)">
+
+<button id="addHabitBtn">
+
+Add Habit
+
+</button>
+
+</div>
+
+</section>
