@@ -1,137 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>HabitFlow Pro</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2>HabitFlow Pro</h2>
+    <!-- Sidebar -->
 
-            <ul>
-                <li>🏠 Dashboard</li>
-                <li>📅 Habit Tracker</li>
-                <li>📊 Analytics</li>
-                <li>💧 Water</li>
-                <li>😴 Sleep</li>
-                <li>😊 Mood</li>
-                <li>📝 Notes</li>
-                <li>⚙️ Settings</li>
-            </ul>
-        </aside>
+    <aside class="sidebar">
 
-        <!-- Main Content -->
-        <main class="main">
+        <h2>HabitFlow Pro</h2>
 
-            <header>
-                <h1>Dashboard</h1>
-                <p>Welcome to HabitFlow Pro 🚀</p>
-            </header>
+        <ul>
 
-            <section class="cards">
+            <li>🏠 Dashboard</li>
+            <li>📅 Habit Tracker</li>
+            <li>📊 Analytics</li>
+            <li>📝 Notes</li>
 
-                <div class="card">
-                    <h3>Total Habits</h3>
-                    <p>0</p>
-                </div>
+        </ul>
 
-                <div class="card">
-                    <h3>Today's Progress</h3>
-                    <p>0%</p>
-                </div>
+    </aside>
 
-                <div class="card">
-                    <h3>Monthly Progress</h3>
-                    <p>0%</p>
-                </div>
+    <!-- Main -->
 
-                <div class="card">
-                    <h3>Current Streak</h3>
-                    <p>0 Days</p>
-                </div>
+    <main class="main">
 
-            </section>
+        <header>
 
-            <section class="habit-section">
+            <h1>Dashboard</h1>
 
-                <div class="section-header">
-                    <h2>Habit Tracker</h2>
-                    <button id="addHabitBtn">+ Add Habit</button>
-                </div>
+            <p>
+                Build better habits every day.
+            </p>
 
-                <div id="habitTableContainer">
+        </header>
 
-    <table id="habitTable">
+        <!-- Dashboard Cards -->
 
-        <thead>
+        <section class="cards">
 
-            <tr>
+            <div class="card">
+                <h3>Total Habits</h3>
+                <p id="totalHabits">0</p>
+            </div>
 
-                <th>Habit</th>
-                <th>Target</th>
+            <div class="card">
+                <h3>Today's Progress</h3>
+                <p id="todayProgress">0%</p>
+            </div>
 
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>10</th>
-                <th>11</th>
-                <th>12</th>
-                <th>13</th>
-                <th>14</th>
-                <th>15</th>
-                <th>16</th>
-                <th>17</th>
-                <th>18</th>
-                <th>19</th>
-                <th>20</th>
-                <th>21</th>
-                <th>22</th>
-                <th>23</th>
-                <th>24</th>
-                <th>25</th>
-                <th>26</th>
-                <th>27</th>
-                <th>28</th>
-                <th>29</th>
-                <th>30</th>
-                <th>31</th>
+            <div class="card">
+                <h3>Monthly Progress</h3>
+                <p id="monthlyProgress">0%</p>
+            </div>
 
-                <th>%</th>
-                <th>Delete</th>
+            <div class="card">
+                <h3>Current Streak</h3>
+                <p id="currentStreak">0</p>
+            </div>
 
-            </tr>
+        </section>
+        <!-- Habit Tracker -->
 
-        </thead>
+        <section class="habit-section">
 
-        <tbody id="habitBody">
+            <div class="section-header">
 
-        </tbody>
+                <h2>Habit Tracker</h2>
 
-    </table>
+                <button id="addHabitBtn">
+                    + Add Habit
+                </button>
+
+            </div>
+
+            <div id="habitTableContainer">
+
+                <table id="habitTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Habit</th>
+                            <th>Target</th>
+
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th>19</th>
+                            <th>20</th>
+                            <th>21</th>
+                            <th>22</th>
+                            <th>23</th>
+                            <th>24</th>
+                            <th>25</th>
+                            <th>26</th>
+                            <th>27</th>
+                            <th>28</th>
+                            <th>29</th>
+                            <th>30</th>
+                            <th>31</th>
+
+                            <th>%</th>
+                            <th>Delete</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="habitBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+        <!-- Notes Section -->
+
+<section class="notes-section">
+
+    <h2>📝 Notes</h2>
+
+    <textarea
+        id="notes"
+        placeholder="Write your notes here...">
+    </textarea>
+
+</section>
+        </main>
 
 </div>
 
-            </section>
-
-        </main>
-
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
